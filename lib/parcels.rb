@@ -6,6 +6,6 @@ class Parcel
   end
 
   def volume()
-
+    @volume = @l * @w * @h
   end
 end
