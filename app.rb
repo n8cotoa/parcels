@@ -12,7 +12,8 @@ get('/output') do
   @length = params.fetch('length')
   @width = params.fetch('width')
   @height = params.fetch('height')
-  new_package = Parcel.new(@length, @width, @height)
+  @shipping = params.fetch('speed')
+  new_package = Parcel.new(@length, @width, @height, @shipping)
   @package_cost = "Your package will cost $#{new_package.cost_to_ship} to ship."
   erb(:output)
 end
