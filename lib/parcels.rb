@@ -14,7 +14,7 @@ class Parcel
 
   def cost_to_ship()
     cost = 0
-    cost += (((@volume * 1) / 100) * @shipping).round(2)
+    cost += (((@volume * 1) / 100) * @shipping)
     cost
   end
 end
